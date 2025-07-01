@@ -9,7 +9,8 @@ public:
         map<char, int> table;
 
         for (int end=0;end<size;end++) {
-            // this is the devil. count() method is used to check whether a key exist in c++ map.
+            // this is the devil. count() method is used to check whether a key with proper char exist in c++ map. 
+            // space will not be considered as a character and will not exist in table.
             if (table.count(s[end]) && table[s[end]] >= start) {
                 start = table[s[end]] + 1;
             }
